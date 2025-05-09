@@ -11,7 +11,7 @@ def download_video():
         yt = YouTube(url)
         stream = yt.streams.get_highest_resolution()
         if not stream:
-            messagebox.showerror("Error", "720p MP4 stream not available.")
+            messagebox.showerror("Error", "Stream not available.")
             return
         stream.download()
         messagebox.showinfo("Success", f"Downloaded: {yt.title}")
